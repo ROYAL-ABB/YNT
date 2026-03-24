@@ -8,10 +8,12 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: linear-gradient(to bottom, black, pink);
             font-family: Arial, sans-serif;
+            color: white;
         }
 
         button {
@@ -29,14 +31,23 @@
             background-color: #ff1493; /* darker pink */
             transform: scale(1.1);
         }
+
+        #message {
+            margin-top: 30px;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            display: none; /* hidden until button click */
+        }
     </style>
 </head>
 <body>
     <button onclick="showMessage()">Who is the most beautiful girl in the world?</button>
+    <div id="message">YASNAAA yasakaaa</div>
 
     <script>
         function showMessage() {
-            alert("YASNAAA yasakaaa");
+            document.getElementById('message').style.display = 'block';
         }
     </script>
 </body>
